@@ -1,0 +1,49 @@
+{%extends "base.html" %}
+
+{% block contactmeactive %} ative  {% endblock contactmeactive %}
+
+{% block title %}  Contact {% endblock title %} 
+{%block body%}
+  
+    
+
+   <div class="container">
+    <h2 class="text-center my-3">contact me </h2>
+    <form action="/contact" method="post">
+      {% csrf_token %} 
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name"  aria-describedby="Your name">
+        <div id="emailHelp" class="form-text">We'll never share your personal details with anyone else.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your personal details with anyone else.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">phone no.</label>
+        <input type="phone" class="form-control" id="phone" name="phone" aria-describedby="your phone no.">
+        <div id="emailHelp" class="form-text">We'll never share your personal details with anyone else.</div>
+      </div>
+
+      
+   
+      
+
+      <div class=" form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Explain your concern</label>
+        <textarea class="form-coontrol" id="desc" name="desc" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+   
+   
+
+   </div>
+
+  
+   {%endblock body%}
